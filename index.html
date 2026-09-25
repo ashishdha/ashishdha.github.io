@@ -81,7 +81,7 @@
     text-decoration:none; margin-right:auto; letter-spacing:.01em;
   }
   .topbar nav{ display:flex; gap:22px; }
-  .topbar nav a{ color:var(--dim); text-decoration:none; font-size:14px; }
+  .topbar nav a{ color:var(--ink); text-decoration:none; font-size:16px; }
   .topbar nav a:hover{ color:var(--turq-bright); }
   .btn{
     display:inline-flex; align-items:center; justify-content:center;
@@ -98,15 +98,15 @@
   @media (max-width:720px){ .topbar nav{ display:none; } }
 
   /* ── hero ────────────────────────────────── */
-  .hero{ padding:clamp(48px,9vw,110px) 0 0; }
-  .hero-grid{ display:grid; gap:40px; grid-template-columns:1fr; align-items:end; }
+  .hero{ padding:clamp(48px,0vw,0px) 0 0; }
+  .hero-grid{ display:grid; gap:40px; grid-template-columns:1fr; align-items:start; }
   .hero-grid.has-photo{ grid-template-columns:minmax(0,1.6fr) minmax(0,1fr); }
   @media (max-width:860px){ .hero-grid.has-photo{ grid-template-columns:1fr; } }
 
   .tour-badge{
     display:inline-flex; align-items:center; gap:10px;
-    font-size:14px; color:var(--turq-bright);
-    border:1px solid rgba(0,232,214,.35); background:rgba(0,232,214,.08);
+    font-size:18px; color:var(--turq-bright);
+    /* border:1px solid rgba(0,232,214,.35); background:rgba(0,232,214,.08); */
     padding:7px 14px 7px 12px; border-radius:999px; margin:0 0 26px;
   }
   .tour-badge i{
@@ -115,12 +115,12 @@
   }
   h1{
     font-family:var(--serif); font-weight:500;
-    font-size:clamp(60px,13vw,148px); line-height:.92; letter-spacing:-.015em;
+    font-size:clamp(60px,13vw,60px); line-height:.92; letter-spacing:-.015em;
     margin:0 0 24px;
   }
   .hero .role{
     font-family:var(--serif); font-style:italic; font-weight:400;
-    font-size:clamp(22px,3.2vw,32px); line-height:1.3; color:var(--dim);
+    font-size:clamp(22px,3.2vw,28px); line-height:1.3; color:var(--dim);
     max-width:24em; margin:0 0 30px;
   }
   .hero .cta{ display:flex; flex-wrap:wrap; gap:12px; }
@@ -131,42 +131,19 @@
   }
   .portrait img{ width:100%; height:100%; object-fit:cover; display:block; }
 
-  /* ── tanpura strings (the one memorable thing) ─────────── */
-  .tanpura{ margin-top:clamp(40px,7vw,80px); border-top:1px solid var(--line-soft); padding-top:20px; }
-  .tanpura-head{ display:flex; flex-wrap:wrap; align-items:baseline; justify-content:space-between; gap:8px 24px; margin-bottom:6px; }
-  .tanpura-head p{ margin:0; color:var(--faint); font-size:14px; }
-  .tanpura-head button{
-    background:none; border:none; color:var(--turq-bright); font:inherit; font-size:14px;
-    cursor:pointer; padding:4px 0; text-decoration:underline; text-underline-offset:3px;
-  }
-  .tanpura-head button:hover{ color:#fff; }
-  .strings{ display:flex; flex-direction:column; }
-  .string{
-    display:block; width:100%; height:44px; padding:0; margin:0;
-    background:none; border:none; cursor:pointer; position:relative;
-  }
-  .string svg{ width:100%; height:100%; display:block; overflow:visible; }
-  .string path{ fill:none; stroke:url(#strGrad); stroke-linecap:round; }
-  .string .name{
-    position:absolute; right:0; top:50%; transform:translateY(-135%);
-    font-size:12px; color:var(--faint); pointer-events:none;
-    background:var(--bg); padding:0 0 0 8px;
-  }
-  .string:hover .name, .string:focus-visible .name{ color:var(--turq-bright); }
-
   /* ── sections ────────────────────────────── */
   section{ padding:clamp(64px,9vw,120px) 0 0; }
   h2{
     font-family:var(--serif); font-weight:500;
-    font-size:clamp(36px,5.4vw,60px); line-height:1.05; letter-spacing:-.01em;
+    font-size:clamp(25px,4.8vw,35px); line-height:1.05; letter-spacing:-.01em;
     margin:0 0 20px;
   }
   .lede{
-    font-family:var(--serif); font-size:clamp(21px,2.4vw,26px); line-height:1.5;
-    color:var(--ink); max-width:34em; margin:0 0 20px;
+    font-family:var(--serif); font-size:clamp(16px,2.2vw,22px); line-height:1.25;
+    color:var(--ink); max-width:60em; margin:0 0 20px;
   }
   .prose p{
-    font-family:var(--serif); font-size:clamp(20px,2.1vw,23px); line-height:1.6;
+    font-family:var(--serif); font-size:clamp(18px,2.2vw,22px); line-height:1.25;
     color:var(--dim); max-width:34em; margin:0 0 18px;
   }
 
@@ -175,14 +152,14 @@
   @media (max-width:820px){ .about-grid{ grid-template-columns:1fr; } }
   .facts{ margin:0; padding:0; list-style:none; border-top:1px solid var(--line); align-self:start; }
   .facts li{ display:flex; gap:18px; padding:14px 0; border-bottom:1px solid var(--line-soft); }
-  .facts b{ flex:0 0 96px; font-weight:500; color:var(--faint); font-size:14px; padding-top:2px; }
+  .facts b{ flex:0 0 96px; font-weight:500; color:var(--purple-bright); font-size:14px; padding-top:2px; }
   .facts span{ color:var(--ink); }
 
   /* tour */
   .tour-window{
     display:flex; flex-wrap:wrap; gap:6px 40px; align-items:baseline;
-    border-top:1px solid var(--line); border-bottom:1px solid var(--line);
-    padding:22px 0; margin:0 0 28px;
+    /* border-bottom:1px solid var(--line); border-top:1px solid var(--line);  */
+    padding: 0px 0; margin:0 0 28px;
   }
   .tour-window strong{ font-family:var(--serif); font-weight:500; font-size:clamp(30px,4.4vw,48px); line-height:1.1; }
   .tour-window span{ color:var(--dim); }
@@ -200,9 +177,9 @@
   .offer{ list-style:none; margin:32px 0 0; padding:0; border-top:1px solid var(--line); }
   .offer li{
     display:grid; grid-template-columns:minmax(0,4fr) minmax(0,7fr); gap:8px clamp(20px,5vw,64px);
-    padding:28px 0; border-bottom:1px solid var(--line-soft);
+    padding:10px 0; border-bottom:1px solid var(--line-soft);
   }
-  .offer h3{ font-family:var(--serif); font-weight:500; font-size:clamp(28px,3.4vw,38px); line-height:1.1; margin:0; }
+  .offer h3{ font-family:var(--serif); font-weight:500; font-size:clamp(22px,3.1vw,28px); line-height:1.1; margin:0; }
   .offer p{ margin:0; color:var(--dim); max-width:36em; }
   @media (max-width:720px){ .offer li{ grid-template-columns:1fr; } }
 
@@ -259,23 +236,31 @@
 <script>
   window.SITE = {
     email:      "ashishdha@gmail.com",
-    photo:      "",                 // e.g. "ashish.jpg" — put the file next to index.html
+    photo:      "namaste_at_blackrock.jpg",                 	// put the file next to index.html
     photoAlt:   "Ashish Dha",
-    instrument: "",                 // e.g. "Sitar", "Voice" — appears in the facts list
+    instrument: "Voice, Piano, Santoor / Hammered Dulcimer", 	// appears in the facts list
 
     // Add tour stops as they are confirmed. They appear automatically in the Tour section.
     // { date: "12 Oct", city: "Brussels", venue: "Venue name", link: "https://..." }
-    tour: [],
+    tour: [
+			{ date: "30-31 Oct", city: "Figeac (near Toulouse), France", venue: "concert, workshop", link: "https://..." },
+			{ date: "1 Nov", city: "Marseille, France", venue: "collaborative concert: Hindustaanee + Sufi", link: "https://..." },
+			{ date: "6 Nov", city: "Near Leige, Belgium", venue: "intimate concert + saatvik Indian dinner", link: "https://..." },
+			{ date: "8 Nov", city: "Brussels, Belgium", venue: "intimate concert + saatvik Indian dinner", link: "https://..." },
+			{ date: "11 Nov", city: "Ghent, Belgium", venue: "ambient concert + sound bath", link: "https://..." },
+			{ date: "14-15 Nov", city: "Sligo, Ireland", venue: "lecture-demonstration on physics of music; workshop on coding sound", link: "https://..." },
+			{ date: "28-29 Nov", city: "Greystones area, Co. Wicklow, Ireland", venue: "concert, workshop", link: "https://..." }
+		],
 
     // Social links: leave "" to hide, or paste the full URL.
     socials: {
       facebook:  "https://www.facebook.com/ashishdha",
-      instagram: "",
-      youtube:   "",
+      instagram: "https://www.instagram.com/ashishdhanaadaalay",
+      youtube:   "https://www.youtube.com/ashishdha",
       spotify:   "",
-      soundcloud:"",
+      soundcloud:"https://www.soundcloud.com/ashishdha",
       linkedin:  "",
-      whatsapp:  ""                 // e.g. "https://wa.me/91XXXXXXXXXX"
+      whatsapp:  "https://wa.me/919013899572"             
     }
   };
 </script>
@@ -283,11 +268,12 @@
 <header class="topbar">
   <div class="wrap">
     <a class="mark" href="#top">Ashish Dha</a>
+	<a class="mark" id="whatsappBtn" href="https://wa.me/919013899572" target="_blank">+91.9013899572</a>
     <nav aria-label="Sections">
-      <a href="#tour">Europe tour</a>
+      <a href="#tour">Europe tour 2026</a>
       <a href="#offer">What I offer</a>
       <a href="#about">About</a>
-      <a href="#database">The database</a>
+      <a href="#database">Raag database</a>
     </nav>
     <a class="btn" href="#invite">Invite me</a>
   </div>
@@ -300,9 +286,9 @@
     <div class="wrap">
       <div class="hero-grid" id="heroGrid">
         <div>
-          <p class="tour-badge"><i></i>Fourth European tour · October to December 2026</p>
           <h1>Ashish Dha</h1>
-          <p class="role">Musician and naad yog practitioner from Pune, taking raag, sound and listening on the road.</p>
+          <p class="role">Indian classical singer (dhrupad & qhayaal), multi-instrumentalist, and naad yog practitioner from Pune, taking relaxing raags, somatic sound and meditative music on the road.</p>
+          <p class="tour-badge"><i></i>Euro Tour 2026 &nbsp; : &nbsp; October onwards</p>
           <div class="cta">
             <a class="btn" href="#invite">Host a concert or workshop</a>
             <a class="btn ghost" href="#about">Read my story</a>
@@ -310,39 +296,15 @@
         </div>
         <figure class="portrait" id="portrait" hidden><img id="portraitImg" alt=""></figure>
       </div>
-
-      <div class="tanpura" aria-label="Four tanpura strings you can pluck">
-        <div class="tanpura-head">
-          <p>Four tanpura strings, tuned Pa, Saa, Saa, low Saa. Tap one to pluck it.</p>
-          <button type="button" id="strum">Hear the tuning</button>
-        </div>
-        <div class="strings" id="strings">
-          <button class="string" type="button" data-semi="-5"  data-vis="5.2" aria-label="Pluck string 1, lower Pa"><svg viewBox="0 0 1000 44" preserveAspectRatio="none"><path stroke-width="1.4" d="M0 22 Q500 22 1000 22"/></svg><span class="name">Pa</span></button>
-          <button class="string" type="button" data-semi="0"   data-vis="6.4" aria-label="Pluck string 2, Saa"><svg viewBox="0 0 1000 44" preserveAspectRatio="none"><path stroke-width="1.4" d="M0 22 Q500 22 1000 22"/></svg><span class="name">Saa</span></button>
-          <button class="string" type="button" data-semi="0"   data-vis="7.0" aria-label="Pluck string 3, Saa"><svg viewBox="0 0 1000 44" preserveAspectRatio="none"><path stroke-width="1.4" d="M0 22 Q500 22 1000 22"/></svg><span class="name">Saa</span></button>
-          <button class="string" type="button" data-semi="-12" data-vis="3.8" aria-label="Pluck string 4, low Saa"><svg viewBox="0 0 1000 44" preserveAspectRatio="none"><path stroke-width="2.4" d="M0 22 Q500 22 1000 22"/></svg><span class="name">low Saa</span></button>
-        </div>
-        <svg width="0" height="0" aria-hidden="true" focusable="false">
-          <defs>
-            <linearGradient id="strGrad" x1="0" x2="1" y1="0" y2="0">
-              <stop offset="0" stop-color="#00e8d6"/>
-              <stop offset="1" stop-color="#c971ff"/>
-            </linearGradient>
-          </defs>
-        </svg>
-      </div>
     </div>
   </div>
 
   <!-- ═════════ TOUR ═════════ -->
   <section id="tour">
     <div class="wrap">
-      <h2>Touring Europe this autumn</h2>
-      <p class="lede">This is my fourth tour of Europe. I travel from India from October to December with concerts and workshops, and I am now looking for hosts, organisers and venues along the route.</p>
-
       <div class="tour-window">
-        <strong>October to December 2026</strong>
-        <span>Concerts, workshops and retreat sessions across Europe</span>
+      <h2>Euro Tour 2026 &nbsp; &mdash; &nbsp; October onwards</h2>	  
+      <p class="lede">This is my fourth tour of Europe. I travel from India with concerts, sound baths and workshops. I welcome musicians, hosts, organisers, and venues who would like to collaborate.</p>
       </div>
 
       <ul class="stops" id="stops" hidden></ul>
@@ -360,7 +322,7 @@
   <section id="offer">
     <div class="wrap">
       <h2>What I bring to your city</h2>
-      <p class="lede">Three formats, each of which can stand alone or be combined into a weekend.</p>
+      <p class="lede">Four basic formats, each of which can customized, or combined into a weekend or longer retreat. I am also glad to join an existing retreat or to co-design a new one with your team.</p>
       <ul class="offer">
         <li>
           <h3>Concerts</h3>
@@ -371,8 +333,12 @@
           <p>Hands-on sessions built on naad yog, the practice of using sound and attentive listening as a path of inner work. Open to people with no musical training as well as to practising musicians.</p>
         </li>
         <li>
-          <h3>Retreats and collaborations</h3>
-          <p>Creative and somatic retreat work, developed together with partners in Europe and India. I am glad to join an existing retreat or to co-design a new one with your team.</p>
+          <h3>Sound baths</h3>
+          <p>Natural voice, Sacred Sounds of Sanskrit, traditional Hindustaanee classical drone, and other instruments as suitable. </p>
+        </li>
+        <li>
+          <h3>One-on-one sessions</h3>
+          <p>Lessons in raag music, basic singing, natural voice, improvisation on your own instrument. Naad yog fundamentals, Sanskrit phonemes for better mantra chanting. Private sessions for somatic sound, musical meditation, sound healing, body work, private sound bath. </p>
         </li>
       </ul>
     </div>
@@ -384,20 +350,41 @@
       <div>
         <h2>About me</h2>
         <div class="prose">
-          <p>I am Ashish Dha, a musician and naad yog practitioner based in Pune, India. My work moves between the concert stage, the workshop room and the retreat space, and it rests on one conviction: sound, listened to closely, is a way of practising.</p>
-          <p>I run the Naadaalay concert series, and I have carried this work to audiences in Europe on three earlier tours. Over the years those journeys have grown into a wide international circle of organisers, teachers, artists and friends, and many of the invitations I receive now come through them.</p>
-          <p>Alongside performing, I study the structure of raag itself. I built an open database of Hindustaanee scales and raags, a project that sits where my musical training meets my programming, and I bring the same curiosity to the stage.</p>
+          <p>I am Ashish Dha, a raag musician and naad yog practitioner based in Pune, India. My work moves between the concert stage, the workshop room and the retreat space. I invite people to PLAY with music, sound, and energy.</p>
+          <p>I have been performing music for over two decades, teaching for over one. I have carried this work to audiences in three different continents, and have had multi-national tours in Europe every year since 2023. Over the years those journeys have grown into a wide international circle of organisers, teachers, artists and friends, and many of the invitations I receive now come through them.</p>
+          <p>Alongside performing, I study the structure of raag itself. I am building an open database of Hindustaanee raags and their parent scales called <i>thaaTs</i>, and have built custom software for exploring the 'mysterious world of microtones' &mdash; both projects combine my musical training and my programming passion.</p>
         </div>
       </div>
       <ul class="facts" aria-label="At a glance">
-        <li><b>Based in</b><span>Pune, India</span></li>
         <li><b>Practice</b><span>Hindustaanee classical music, naad yog</span></li>
-        <li id="instrumentRow" hidden><b>Instrument</b><span id="instrumentVal"></span></li>
-        <li><b>Series</b><span>Naadaalay concerts</span></li>
-        <li><b>Formats</b><span>Concerts, workshops, retreats</span></li>
+        <li id="instrumentRow" hidden><b>Instruments</b><span id="instrumentVal"></span></li>
+        <li><b>Formats</b><span>Concerts, workshops, sound baths, lessons, retreats</span></li>
         <li><b>Europe</b><span>Fourth tour, October to December 2026</span></li>
+        <li><b>Based in</b><span>Pune, India</span></li>
         <li><b>Contact</b><span><a id="factEmail" href="#"></a></span></li>
       </ul>
+    </div>
+  </section>
+
+  <!-- ═════════ CONTACT ═════════ -->
+  <section id="invite">
+    <div class="wrap contact">
+      <div>
+        <h2>Invite me to your city</h2>
+        <p class="lede" style="margin-bottom:18px">Write to me with:</p>
+        <ul class="ask">
+          <li>Your location and the dates you have in mind</li>
+          <li>The space, and how many people it holds</li>
+          <li>Whether you would like a concert, sound bath, workshop or multiple</li>
+          <li>Anything about your community I should know</li>
+        </ul>
+        <a class="btn" id="whatsappBtn" href="https://wa.me/919013899572" target="_blank">WhatsApp</a>
+        <a class="btn" id="mailBtn" href="#" target="_blank">Email</a>
+      </div>
+      <div>
+        <h3 class="socials-title">Find me online</h3>
+        <ul class="socials" id="socials"></ul>
+      </div>
     </div>
   </section>
 
@@ -407,36 +394,15 @@
       <div class="dbcard">
         <div>
           <h2>Naadaalay DB</h2>
-          <p>A free reference database of Hindustaanee raags that I designed and built myself. It starts from all 4,096 possible scales within the octave and describes each raag through its ascent and descent, thaat, omitted notes, symmetry, consonance and more, so that a student, teacher or curious listener can search the tradition by its musical structure.</p>
+          <p>A free reference database of Hindustaanee raags, showcasing a new rigorously scientific approach to South Asian classical music. It starts from all 4,096 possible scales within the octave and describes each raag through its ascent and descent, thaat, omitted notes, symmetry, consonance and more, so that a student, teacher or curious listener can search the tradition by its musical structural features.</p>
           <a class="btn ghost" href="/raag/">Explore the database</a>
         </div>
         <div class="dbstats" aria-label="Database in numbers">
-          <div><b>4,096</b><span>scales of the octave mapped</span></div>
-          <div><b>32</b><span>thaats catalogued</span></div>
-          <div><b>5</b><span>notation systems, including Sargam and Western</span></div>
+          <div><b>5,677 +</b><span>traditional and potential raags</span></div>
+          <div><b>4,096</b><span>scales (all combinations of 12 notes)</span></div>
+          <div><b>32</b><span>thaaTs (parent-scale classifiers)</span></div>
+          <div><b>5</b><span>notation systems, including Western</span></div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═════════ CONTACT ═════════ -->
-  <section id="invite">
-    <div class="wrap contact">
-      <div>
-        <h2>Invite me to your city</h2>
-        <p class="lede" style="margin-bottom:18px">Write to me with these four things and I will reply with what is possible.</p>
-        <ul class="ask">
-          <li>Your city and the dates you have in mind</li>
-          <li>The space, and how many people it holds</li>
-          <li>Whether you would like a concert, a workshop or both</li>
-          <li>Anything about your community I should know</li>
-        </ul>
-        <a class="btn" id="mailBtn" href="#">Write me an email</a>
-        <p class="direct"><a id="directEmail" href="#"></a></p>
-      </div>
-      <div>
-        <h3 class="socials-title">Find me online</h3>
-        <ul class="socials" id="socials"></ul>
       </div>
     </div>
   </section>
@@ -445,7 +411,7 @@
 
 <footer>
   <div class="wrap">
-    <span>© <span id="yr"></span> Ashish Dha · Pune, India</span>
+    <span>Ashish Dha · Pune, India</span>
     <span>On tour in Europe, October to December 2026</span>
   </div>
 </footer>
@@ -461,11 +427,8 @@
   var body = "Hello Ashish,\n\nCity and dates:\nSpace and capacity:\nConcert, workshop, or both:\nAbout our community:\n\nThank you,\n";
   var mailto = "mailto:" + S.email + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
   $("mailBtn").href = mailto;
-  $("directEmail").href = "mailto:" + S.email;
-  $("directEmail").textContent = S.email;
   $("factEmail").href = "mailto:" + S.email;
   $("factEmail").textContent = S.email;
-  $("yr").textContent = new Date().getFullYear();
 
   /* ── photo + instrument ──────────────────────── */
   if (S.photo){
@@ -505,7 +468,7 @@
   };
   var NOTES = {
     facebook:"Updates and tour news", instagram:"Photos and clips", youtube:"Concert recordings",
-    spotify:"Listen", soundcloud:"Listen", linkedin:"Professional profile", whatsapp:"Message me directly"
+    spotify:"Listen", soundcloud:"Musical experiments", linkedin:"Professional profile", whatsapp:"Best for quick response"
   };
   var soc = $("socials");
   Object.keys(LABELS).forEach(function(k){
@@ -522,76 +485,11 @@
   var em = document.createElement("li");
   var ea = document.createElement("a"); ea.href = "mailto:" + S.email;
   ea.appendChild(document.createTextNode("Email"));
-  var esm = document.createElement("small"); esm.textContent = "Best for bookings";
+  var esm = document.createElement("small"); esm.textContent = "For longer documents";
   ea.appendChild(esm); em.appendChild(ea); soc.appendChild(em);
 
-  /* ── tanpura: pluck sound + vibrating strings ─── */
-  var SAA_HZ = 138.59;               // C#3, a comfortable Saa for a male voice or sitar
-  var ctx = null;
-  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-  function audio(){
-    if (!ctx){
-      var AC = window.AudioContext || window.webkitAudioContext;
-      if (!AC) return null;
-      ctx = new AC();
-    }
-    if (ctx.state === "suspended") ctx.resume();
-    return ctx;
-  }
-
-  function pluckSound(semi){
-    var c = audio(); if (!c) return;
-    var f0 = SAA_HZ * Math.pow(2, semi / 12);
-    var now = c.currentTime;
-    var master = c.createGain();
-    master.gain.value = 0.16;
-    master.connect(c.destination);
-    for (var n = 1; n <= 12; n++){
-      var osc = c.createOscillator();
-      var g = c.createGain();
-      osc.type = "sine";
-      osc.frequency.value = f0 * n * (1 + (n > 3 ? 0.0006 * n : 0));
-      var peak = 1 / Math.pow(n, 0.85);
-      g.gain.setValueAtTime(0.0001, now);
-      g.gain.exponentialRampToValueAtTime(peak, now + 0.012);
-      g.gain.exponentialRampToValueAtTime(0.0001, now + 5.5 / Math.sqrt(n));
-      osc.connect(g); g.connect(master);
-      osc.start(now); osc.stop(now + 5.6);
-    }
-  }
-
-  function vibrate(btn){
-    var path = btn.querySelector("path");
-    var freq = parseFloat(btn.dataset.vis) || 6;
-    var amp = reduce ? 3 : 15;
-    var start = performance.now();
-    if (btn._raf) cancelAnimationFrame(btn._raf);
-    (function frame(t){
-      var s = (t - start) / 1000;
-      var dy = amp * Math.exp(-s * 1.7) * Math.sin(2 * Math.PI * freq * s);
-      path.setAttribute("d", "M0 22 Q500 " + (22 + dy * 2).toFixed(2) + " 1000 22");
-      if (s < 3.2){ btn._raf = requestAnimationFrame(frame); }
-      else { path.setAttribute("d", "M0 22 Q500 22 1000 22"); }
-    })(start);
-  }
-
-  function pluck(btn){
-    pluckSound(parseFloat(btn.dataset.semi));
-    vibrate(btn);
-  }
-
-  var strs = Array.prototype.slice.call(document.querySelectorAll(".string"));
-  strs.forEach(function(b){ b.addEventListener("click", function(){ pluck(b); }); });
-
-  var strumming = false;
-  $("strum").addEventListener("click", function(){
-    if (strumming) return;
-    strumming = true;
-    strs.forEach(function(b, i){ setTimeout(function(){ pluck(b); }, i * 950); });
-    setTimeout(function(){ strumming = false; }, strs.length * 950);
-  });
 })();
 </script>
+
 </body>
 </html>
