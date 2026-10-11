@@ -128,11 +128,13 @@
   .portrait{
     margin:0; border-radius:14px; overflow:hidden; border:1px solid var(--line);
     background:var(--panel); aspect-ratio:4/5;
+	max-width: 70%; /* Shrinks the whole box and image together */
+	
   }
   .portrait img{ width:100%; height:100%; object-fit:cover; display:block; }
 
   /* ── sections ────────────────────────────── */
-  section{ padding:clamp(64px,9vw,120px) 0 0; }
+  section{ padding:clamp(24px,9vw,30px) 0 0; }
   h2{
     font-family:var(--serif); font-weight:500;
     font-size:clamp(25px,4.8vw,35px); line-height:1.05; letter-spacing:-.01em;
@@ -243,13 +245,19 @@
     // Add tour stops as they are confirmed. They appear automatically in the Tour section.
     // { date: "12 Oct", city: "Brussels", venue: "Venue name", link: "https://..." }
     tour: [
-			{ date: "30-31 Oct", city: "Figeac (near Toulouse), France", venue: "concert, workshop", link: "https://..." },
-			{ date: "1 Nov", city: "Marseille, France", venue: "collaborative concert: Hindustaanee + Sufi", link: "https://..." },
-			{ date: "6 Nov", city: "Near Leige, Belgium", venue: "intimate concert + saatvik Indian dinner", link: "https://..." },
-			{ date: "8 Nov", city: "Brussels, Belgium", venue: "intimate concert + saatvik Indian dinner", link: "https://..." },
-			{ date: "11 Nov", city: "Ghent, Belgium", venue: "ambient concert + sound bath", link: "https://..." },
-			{ date: "14-15 Nov", city: "Sligo, Ireland", venue: "lecture-demonstration on physics of music; workshop on coding sound", link: "https://..." },
-			{ date: "28-29 Nov", city: "Greystones area, Co. Wicklow, Ireland", venue: "concert, workshop", link: "https://..." }
+			{ date: "30-31 Oct", city: "Concert, naad yog workshop", venue: "Figeac, France", link: "https://www.facebook.com/events/2322783755139518/" },
+			{ date: "1 Nov", city: "Collaborative concert: Hindustaanee + Sufi", venue: "Marseille, France", link: "https://www.facebook.com/events/1654063632798819/" },
+			{ date: "6 Nov", city: "Intimate concert + saatvik Indian dinner", venue: "Near Leige, Belgium", link: "https://www.facebook.com/ashishdha/events" },
+			{ date: "7 Nov", city: "Concert, beginner-friendly Hindustaanee classical singing workshop", venue: "Near Brussels, Belgium", link: "PRIVATE EVENT" },
+			{ date: "8 Nov", city: "Intimate concert + saatvik Indian dinner", venue: "Feluy 7181, Belgium", link: "https://www.facebook.com/events/1752127579407644/" },
+			{ date: "9 Nov", city: "Intimate house concert", venue: "Rixensart, Near Brussels, Belgium", link: "https://www.facebook.com/events/1092594563655349/" },
+			{ date: "10 Nov", city: "Ambient concert, sound bath", venue: "Ghent, Belgium", link: "https://www.instagram.com/p/DeMxvAKCuK-/?srtk=MW42aXo5c3ZtaHVwZg==" },
+			{ date: "11 Nov", city: "Ambient concert + sound bath: Part of an Ecstatic Dance event for Peace Day", venue: "Ghent, Belgium", link: "https://www.facebook.com/events/1574112424365974/" },
+			{ date: "12 Nov", city: "Collaborative concert + saatvik Indian dinner", venue: "Feluy 7181, Belgium", link: "https://www.facebook.com/events/1771219284132045/" },
+			{ date: "14 Nov", city: "Lecture-demonstration on physics of music", venue: "Sligo, Ireland", link: "https://www.atu.ie/connect/projects-and-programmes/science-week#sligo-science-festival" },
+			{ date: "15 Nov", city: "Workshop on coding sound", venue: "Sligo, Ireland", link: "https://www.atu.ie/connect/projects-and-programmes/science-week#sligo-science-festival" },
+			{ date: "21 Nov", city: "Intimate house concert", venue: "Sutton, Dublin 13, Ireland", link: "https://www.facebook.com/events/1081560187994790/" },
+			{ date: "28-29 Nov", city: "Concert, workshop", venue: "Greystones area, Co. Wicklow, Ireland", link: "https://www.facebook.com/ashishdha/events" }
 		],
 
     // Social links: leave "" to hide, or paste the full URL.
@@ -288,10 +296,12 @@
         <div>
           <h1>Ashish Dha</h1>
           <p class="role">Indian classical singer (dhrupad & qhayaal), multi-instrumentalist, and naad yog practitioner from Pune, taking relaxing raags, somatic sound and meditative music on the road.</p>
-          <p class="tour-badge"><i></i>Euro Tour 2026 &nbsp; : &nbsp; October onwards</p>
+          <!-- <p class="tour-badge"><i></i>Euro Tour 2026 &nbsp; : &nbsp; October&ndash;November</p> -->
           <div class="cta">
-            <a class="btn" href="#invite">Host a concert or workshop</a>
-            <a class="btn ghost" href="#about">Read my story</a>
+            <a class="btn" href="#tour">Euro Tour 2026</a>
+            <a class="btn" href="#invite">Invite me</a>
+            <a class="btn" href="#about">Read my story</a>
+            <!-- <a class="btn" href="https://ashishdha.github.io/raag">Raag Database</a> -->
           </div>
         </div>
         <figure class="portrait" id="portrait" hidden><img id="portraitImg" alt=""></figure>
@@ -303,7 +313,7 @@
   <section id="tour">
     <div class="wrap">
       <div class="tour-window">
-      <h2>Euro Tour 2026 &nbsp; &mdash; &nbsp; October onwards</h2>	  
+      <h2>Euro Tour 2026 &nbsp; &mdash; &nbsp; October&ndash;November</h2>	  
       <p class="lede">This is my fourth tour of Europe. I travel from India with concerts, sound baths and workshops. I welcome musicians, hosts, organisers, and venues who would like to collaborate.</p>
       </div>
 
@@ -395,7 +405,7 @@
         <div>
           <h2>Naadaalay DB</h2>
           <p>A free reference database of Hindustaanee raags, showcasing a new rigorously scientific approach to South Asian classical music. It starts from all 4,096 possible scales within the octave and describes each raag through its ascent and descent, thaat, omitted notes, symmetry, consonance and more, so that a student, teacher or curious listener can search the tradition by its musical structural features.</p>
-          <a class="btn ghost" href="/raag/">Explore the database</a>
+          <a class="btn ghost" href="https://ashishdha.github.io/raag">Explore the database</a>
         </div>
         <div class="dbstats" aria-label="Database in numbers">
           <div><b>5,677 +</b><span>traditional and potential raags</span></div>
